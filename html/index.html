@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 브라우저 탭에 표시되는 제목 -->
+    <title>Welcome SKALA</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="profile">
+
+    <!-- 화면에 표시되는 본문 타이틀 -->
+    <h1>최승민의 유니버스</h1>
+
+    <!-- 화면에 표시되는 본문 내용 -->
+    <p>저의 프로필, 학습 내용, 여행 기록을 모아둔 Hub 페이지 입니다.</p>
+    <nav>
+    <h2>바로가기 메뉴</h1>
+    <ul style="list-style-type:disc;">
+        <li><a href="myProfile.html">나의 소개 (myProfile)</a></li>
+        <li><a href="myClass.html">나의 수업 (myClass)</a></li>
+        <li><a href="holiday.html">나의 휴일 (myHoliday)</a></li>
+        <li><a href="myTrip.html">여행 앨범 (Album)</a></li>
+        <li><a href="signUp.html">회원가입 (Sign Up)</a></li>
+    </ul>
+    <hr>
+    </nav>
+    <hr>
+    </div>
+    <div class="row-layout">
+        <main>
+        <h2>오늘의 주요 소식</h2>
+        <h2>[업데이트] 여행 앨범에 동영상 추가 완료!</h2>
+        <P>SKALA 4기 광주캠퍼스 수강 시작</P>
+        <h2>이달의 베스트 컷</h2>
+        <div class="skala">
+        <p>
+        <img src="IMG_1537.jpeg" width="300" height="400" alt="SKALA 광주캠퍼스 내부 사진"><br>SKALA 광주캠퍼스 (2026년)
+        </p>
+        </div>
+        </main>
+        <aside>
+            <h2>🌤️ 실시간 정보</h2>
+                <p>현재 위치: 광주광역시 광산구 📍</p>
+                <section>
+                    <h3>🌤️ 실시간 세계 날씨</h3>
+                    <select id="city-select">
+                        <option value="none">도시를 선택하세요</option>
+                        <option value="37.56,126.97">대한민국 서울 🇰🇷</option>
+                        <option value="35.67,139.65">일본 도쿄 🇯🇵</option>
+                        <option value="48.85,2.35">프랑스 파리 🇫🇷</option>
+                    </select>
+                    <div id="weather-box">
+                        <p>도시를 선택하면 좌표가 표시됩니다.</p>
+                        <script type="module" src="../script/realtimeInfo.js"></script>
+                        <script src="../script/weather.js"></script>  
+                    </div>
+                </section>
+                <hr> 
+                <section class="game-area">
+                <h3>🎮 자바스크립트천국</h3>
+                <script src="../script/upDown.js"></script>
+                <button class="btn-submit" onclick="randomNum()">업다운 게임 🚀</button>
+                <script src="../script/grade.js"></script>
+                <button class="btn-submit" onclick="checkGrade()">성적 확인 📊</button>
+                <script src="../script/bag.js"></script>
+                <button class="btn-submit" onclick="showMyBag()">내 가방 보기 🎒</button>
+                </section>
+            
+        </aside>
+    </div>
+    <div class="information">
+        <h2>실시간 정보</h2>
+        <P>현재 위치: 광주인력개발원 SKALA관</P>
+        <P>추천 학습 사이트: <a href="https://www.w3schools.com" target="_blank">W3Schools</a></P>
+    </div>
+    <hr>
+    <div class="inquiry">
+        <P>이메일 문의: chi.skala.6418@gmail.com</P>
+        <p><small>© 2026 최승민 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
+    </div>
+</body>
+</html>

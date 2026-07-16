@@ -1,0 +1,390 @@
+/* ==========================================================================
+   [미션 1] 구글 폰트 불러오기
+   ========================================================================== */
+/* 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap');
+/* 전체 페이지 글골 및 설정 */
+body {
+    font-family: 'Dongle', sans-serif;
+    line-height: 1.1;
+    color: rgb(49, 154, 154);
+    background-color: aliceblue;
+    font-size: 25px;
+    justify-content: center; /* 세로 정가운데 정렬 */
+    align-items: center;     /* 가로 정가운데 정렬 */
+}
+div.profile {
+    font-family: 'Jua', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    margin: 0;
+
+    gap: 0px; /* 정렬된 요소들 사이에 20px씩 균일한 간격을 줍니다 */
+}
+div.information {
+    font-family: 'Jua', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    margin: 0;
+    
+    gap: 0px; /* 정렬된 요소들 사이에 20px씩 균일한 간격을 줍니다 */
+}
+div.inquiry {
+    font-family: 'Jua', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    margin: 0;
+    
+    gap: 0px; /* 정렬된 요소들 사이에 20px씩 균일한 간격을 줍니다 */
+}
+h1 {
+    background-color: black;
+    font-size: 35px;
+    border-bottom: 3px;
+    padding-bottom: 5px;
+}
+h2 {
+    color: rgb(4, 54, 23);
+    font-size: 35px;
+    border-bottom: 3px;
+    border-left: 3px;
+    border-right: 3px;
+    border-top: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/* ==========================================================================
+   [미션 2] 레이아웃 및 폼 요소 상세 디자인
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+}
+
+/* 가입 폼 박스를 중앙으로 정렬하고 폭 제한 */
+form {
+    max-width: 600px;       /* 화면의 가입 폼 가로 폭 최댓값 제한 */
+    margin: 0 auto;         /* 좌우 여백 자동 분배로 화면 중앙 배치 (쉼표 오타 수정) */
+    padding: 20px;          
+    background-color: white; /* 폼 가독성을 위해 흰색 배경 추가 */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 입체감 효과 */
+}
+/* ==========================================================================
+   [미션 3] 바로가기 메뉴 정리
+   ========================================================================== */
+/* 그룹 상자 영역 디자인 */
+
+fieldset {
+    border: 1px solid #e0e0e0;      
+    border-radius: 6px;             
+    padding: 20px;                  
+    margin-bottom: 20px;            
+}
+
+legend {
+    font-weight: bold;              
+    color: #2c3e50;                 
+    padding: 0 10px;                
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;                    
+    padding: 10px;                  
+    margin-top: 5px;                
+    margin-bottom: 15px;            
+    border: 1px solid #cccccc;      
+    border-radius: 4px;             
+    font-family: inherit;           /* 부모의 폰트(Dongle) 상속 */
+    font-size: 0.95em;
+}
+
+/* [개선] 이메일 입력 영역 가로 배치를 위한 레이아웃 설정 */
+.email-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.email-group input[type="text"],
+.email-group select {
+    width: auto;
+    flex: 1;                       /* 입력창과 셀렉트 박스가 가로 비율을 동등하게 나눔 */
+    margin: 0;                     
+}
+
+
+/* 라디오 버튼과 체크박스는 가로 가득(100%) 차지하는 대상에서 제외 */
+input[type="checkbox"] {
+    width: auto;                    
+    margin-right: 5px;              
+    cursor: pointer;                
+}
+
+
+/* 자기소개 영역 조절 */
+textarea {
+    resize: vertical;               /* 세로 크기 조절만 허용 */
+    min-height: 20px;              
+}
+
+/* 버튼 배치 영역 중앙 정렬 */
+.button-group {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 하단 제출 및 초기화 버튼 공통 스타일 */
+.btn-submit,
+.btn-reset {
+    padding: 12px 25px;             
+    font-size: 1em;
+    font-weight: bold;
+    border: none;                   
+    border-radius: 4px;             
+    cursor: pointer;                
+    margin: 0 5px;                  /* 버튼 사이의 간격 좌우 5px */
+    font-family: inherit;           /* 폰트가 버튼 내부에도 나타나도록 설정 */
+    transition: background 0.2s ease; /* 호버 효과 전환속도 */
+}
+
+/* 가입하기 버튼 개별 색상 (청록색) */
+.btn-submit {
+    background-color: #16a085;      
+    color: #ffffff;                 
+}
+
+.btn-submit:hover {
+    background-color: #117a65;      /* 마우스 오버 시 약간 어두워지는 피드백 추가 */
+}
+
+/* 다시 작성 버튼 개별 색상 (회색) */
+.btn-reset {
+    background-color: #bdc3c7;      
+    color: #ffffff;
+}
+
+.btn-reset:hover {
+    background-color: #95a5a6;
+}
+/* ==========================================================================
+   [미션 4] 레이아웃 잡기
+   ========================================================================== */
+/* Flexbox 활용: 가로 메뉴 바 및 부드러운 전환(Transition) */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+nav a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* 부드러운 변화 */
+}
+
+
+/* Grid 활용: 여행지 앨범 3열 바둑판 배치 */
+.trip-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 구조 */
+    gap: 20px;
+}
+
+.row-layout {
+    display: flex;
+    gap: 20px;       /* 메인과 사이드바 사이의 간격 */
+    width: 100%;     /* 전체 너비 채우기 */
+    max-width: 1200px; /* 너무 넓어지지 않게 최대 폭 제한 (선택사항) */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+/** Flexbox로 메인 콘텐츠와 사이드바를 나란히 배치하기 **/ 
+main {
+    flex: 7;            /* 전체 공간 중 70%만큼의 비율을 차지 */
+    padding: 15px;
+}
+aside {
+    flex: 3;            /* 전체 공간 중 30%만큼의 비율을 차지 */
+    background-color: #f8f9fa; /* 사이드바 구분을 위해 연한 배경색 추가 */
+    padding: 15px;
+    border-radius: 6px;
+}
+/* ==========================================================================
+   [미션 5] 반응형 미디어 쿼리 (스마트폰 및 태블릿 크기 화면)
+   ========================================================================== */
+/* 화면 가로 폭이 768px 이하(모바일 기기 수준)가 되면 아래 규칙들이 발동합니다. */
+@media (max-width: 768px) {
+    
+    /* 1. 메인 메뉴바를 가로 배치에서 세로 쌓기 구조로 변경 */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    main, aside {
+        width: 50%;
+    }
+    
+    
+    .trip-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   [미션 6] 부드러운 전환(Transitions) 및 등장 애니메이션(Animations)
+   ========================================================================== */
+/* [1-1] 메뉴 바 링크 호버 효과 */
+nav a {
+    /* 배경색과 글자색이 바뀔 때 0.3초 동안 부드럽게 스르륵 변하도록 설정 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #16a085;      /* 마우스를 올리면 포인트 청록색 배경 */
+    color: #ffffff;                 /* 글자색은 흰색으로 변경 */
+}
+
+/* [1-2] 회원가입 및 다시작성 버튼 호버 효과 */
+.btn-submit,
+.btn-reset {
+    /* 모든 변경사항(배경색, 불투명도 등)을 0.2초간 부드럽게 처리 */
+    transition: all 0.2s ease;
+}
+
+/* 회원가입 버튼에 마우스를 올리면 살짝 더 어두운 청록색으로 변경 */
+.btn-submit:hover {
+    background-color: #117a65;
+}
+
+/* 다시작성 버튼에 마우스를 올리면 살짝 더 어두운 회색으로 변경 */
+.btn-reset:hover {
+    background-color: #95a5a6;
+}
+
+/*  메인 페이지 웰컴 키프레임 애니메이션 (@keyframes) */
+
+/* [3-1] 아래에서 위로 부드럽게 페이드인 되는 애니메이션 설정 구조 정의 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;                 /* 처음에는 투명하게 숨김 */
+        transform: translateY(20px); /* 원래 위치보다 20px 아래에서 시작 */
+    }
+    to {
+        opacity: 1;                 /* 선명하게 나타남 */
+        transform: translateY(0);    /* 제자리로 정착 */
+    }
+}
+body h1 {
+    /* 애니메이션 이름 / 0.8초 동안 실행 / 부드럽게 끝남 / 애니메이션이 끝난 후 최종 상태(to) 유지 */
+    animation: fadeInUp 1s ease-out forwards;
+}
+/* ==========================================================================
+   테이블 꾸미기
+   ========================================================================== */
+/* 테이블 전체 스타일 */
+table {
+    width: 100%;                 /* 사이드바 너비에 맞게 꽉 채우기 */
+    border-collapse: collapse;   /* 이중 테두리 선을 하나로 합치기 (필수!) */
+    margin-top: 10px;
+}
+
+/* 제목 칸(th)과 내용 칸(td)에 테두리와 여백 주기 */
+table th, table td {
+    border: 1px solid #cbd5e1;   /* 부드러운 회색 실선 테두리 */
+    padding: 8px 12px;           /* 글자와 테두리 사이의 여백 */
+    text-align: center;          /* 텍스트 가운데 정렬 */
+}
+
+/* 테이블 제목(thead) 배경색 지정으로 헤더 강조 */
+table th {
+    background-color: #f1f5f9;   /* 연한 회색 배경 */
+    font-weight: bold;
+    color: #1e293b;
+}
+
+/* 마우스를 올렸을 때 행(row)이 하이라이트되는 효과 (선택사항) */
+table tbody tr:hover {
+    background-color: #f8fafc;
+}
+aside section.fortune-telling {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 버튼들을 정가운데로 정렬 */
+    gap: 10px;
+}
+/* aside 안에 포함된 모든 h2 태그의 폰트 크기만 22px로 조절 */
+aside h2 {
+    font-size: 30px; 
+}
+
+/* 마우스 올렸을 때 둥실 떠오르는 효과 */
+aside section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+/** Flexbox로 메인 콘텐츠와 사이드바를 [1:1 비율]로 나란히 배치 **/ 
+main {
+    font-family: 'Jua', sans-serif;
+    flex: 1;            /* 7에서 1로 수정 (50% 차지) */
+    padding: 15px;
+}
+
+aside {
+    flex: 1;            /* 3에서 1로 수정 (50% 차지) */
+    background-color: #f8f9fa; /* 사이드바 구분을 위해 연한 배경색 추가 */
+    padding: 15px;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 호버 효과용 */
+}
+.audio-container {
+    display: flex;
+    justify-content: center; /* 자식을 가로축 기준 중앙으로 배치 */
+    
+    /* 선택사항: 위아래 여백을 주고 싶다면 추가하세요 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.skala{
+    transform: scale(1);
+
+}
+.trip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.trip-card img{
+    display: flex;
+    padding: 1px 1px;
+    gap: 10px;              /* 사진과 글자 사이의 간격 (원하는 대로 조절 가능) */
+}
+.trip-card{
+    text-align: center;
+}
+.trip-grid-container {
+    width: 1050px;       /* 가로 크기 지정 필수! */
+    margin: 0 auto;
+}
+.vlog {
+    text-align: center;      /* 내부의 제목(h2), 비디오, 자막을 가로 가운데 정렬 */
+    padding: 20px;
+    background-color: white; /* 비디오 상자만 돋보이게 카드 스타일 적용 */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 예쁜 그림자 효과 */
+}
