@@ -1,0 +1,4 @@
+source,latitude,longitude,timezone,hourly_temperatures_count,name,capital,currency,ip,country,city
+Open-Meteo,37.55,127.0,Asia/Seoul,72.0,,,,,,
+Countries.dev,,,,,Korea (Republic of),Seoul,,,,
+IP-API,,,,,,,,8.8.8.8,United States,Ashburn
